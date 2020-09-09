@@ -1,0 +1,277 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-MKG5R2C');</script>
+  <!-- End Google Tag Manager -->
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-176751443-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-176751443-2');
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-175902098-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-175902098-4');
+</script>
+<!-- starting code -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saksham is a NGO working towards making the families
+    of the accused and prisoners in jail self independent economically so that they don't become
+     the passive victim of punishment given by law.">
+    <title>Saksham | Legal Aid Society</title>
+    <link rel="canonical" href="https://sakshamfoundations.in/" />
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="style">
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" as="style">
+    <link rel="shortcut icon" href="{%static 'home/dist/img/favicon.ico'%}">
+    <link rel="preload stylesheet" href="{%static 'home/stylesheets/font-face.css'%}" as="style">
+    <link rel="stylesheet" href="{%static 'home/Depd/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'home/stylesheets/index.css'%}">
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKG5R2C"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-label="Collapse Button">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#"><img src="{%static 'home/dist/img/kyan.png'%}" loading="lazy" id="logo-image" alt="logo-image">&nbsp;<span id="logo-text">Saksham</span></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'donate' %}">Donate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'apply' %}">Apply</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">BLog</a>
+                    <a class="dropdown-item" href="#">Gallery</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-warning" type="button" style="color: black;" href="{% url 'user_login' %}" id="nav-button" name="login">Join Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+      <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="6"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="7"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'home/dist/img/img1.jpg'%}" class="d-block w-100 image-slide" alt="Indian Flag">
+            <div class="carousel-caption">
+              <h5>India a democracy</h5>
+              <p style="color: black ;" class="d-none d-sm-block">of 1.35 bollion+ </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img10.jpg'%}"  class="d-block w-100 image-slide" alt="Symbol of law">
+            <div class="carousel-caption">
+              <h5>With 3.5Cr pending cases</h5>
+              <p class="d-none d-sm-block">And <strong>only</strong> 16,119 judges</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img2.jpg'%}"  class="d-block w-100 image-slide" alt="Prison" >
+            <div class="carousel-caption">
+              <h5>With 433,03 prisoners in the Prison</h5>
+              <p class="d-none d-sm-block">Where 95.73% are male and 4.27% are females</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img8.jpg'%}"  class="d-block w-100 image-slide" alt="RikshawWala">
+            <div class="carousel-caption">
+              <h5>Men being the sole bread earner in mjority of the families</h5>
+              <p class="d-none d-sm-block">With the sole bread earner gone what happens to the families that are left behind ?</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img4.jpg'%}"  class="d-block w-100 image-slide" alt="children">
+            <div class="carousel-caption">
+              <h5>They are left with uncertain fututre...</h5>
+              <p class="d-none d-sm-block">Society Watermarks them and alienets them. Their children left with mental trauma</p>
+            </div>
+          </div>s
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img6.jpg'%}"  class="d-block w-100 image-slide" alt="Child labour">
+            <div class="carousel-caption">
+              <h5>Bread is the real need</h5>
+              <p class="d-none d-sm-block">The children eventually start to work as child labourers to earn their bread</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/img7.jpg'%}"  class="d-block w-100 image-slide" alt="image7">
+            <div class="carousel-caption">
+              <h5>Poverty deepens. The families economic balance is lost</h5>
+              <p class="d-none d-sm-block">To cater the need other family members start working in unorganised sectors. Doing petty jobs
+                to earn their day.
+              </p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'home/dist/img/black-back.jpg'%}" class="d-block w-100 image-slide" alt="black">
+            <div class="carouseltext">
+                <img src="{% static 'home/dist/img/kyan.png'%}"   loading="lazy" style="height: 20%;"id="slide-image">
+                <h1 id="st">SAKSHAM</h1>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+      <div class="container" id="content-1" >
+        <div class="row row-content">
+          <div class="offset-1 col-4 col-sm-4 offset-sm-1" id="card1">
+            <h1 style="text-align: center; padding-top: 1%; " class="d-none d-sm-block">Who are we ?</h1>
+            <img src="{% static 'home/dist/img/Team_1.svg'%}" class="img-fluid" id="card-img-1" alt="sticker1">
+            <h6 style="text-align: center; padding-top: 1%; " class="d-block d-sm-none">Who are we ?</h6>
+            <p style="text-align: justify;" class="d-none" id="card-content-1">
+              We are <strong>Saksham</strong>. A non-profit organization which aims to create a
+              positive social impact by protecting and restoring Prison Rights in
+              India, accomplishing necessary reforms in prison administration, and
+              rehabilitating former prisoners.
+            </p>
+          </div>
+          <div class=" offset-2 col-4 offset-sm-2 col-sm-4" id="card2">
+            <h1 style="text-align: center; padding-top: 1%;" class="d-none d-sm-block">A bit of history</h1>
+            <img src="{% static 'home/dist/img/Reading_1.svg'%}" class="img-fluid" id="card-img-2" alt="sticker2">
+            <h6 style="text-align: center; padding-top: 1%;" class="d-block d-sm-none">A bit of history</h6>
+            <p style="text-align: justify;" class="d-none" id="card-content-2">
+            A group of legal professionals came together in 2018 to set up
+            Saksham, working at the grass-roots level to initiate positive
+            changes in the lives of prisoners. In India 80 percent of the
+            inmates in jail are under trials; they are not granted bails,
+            their rights are violated and they are subjected to oppression
+            in jail. They live under harsh conditions with negligible medical
+            facilities. Though they are entitled to rights through Prisoners Act,
+            1894; the Model Manual Prison India, etc, the problem is that they are
+            not effectively implemented. A very large number of under–trial prisoners
+            suffer prolonged incarceration even in petty criminal matters merely because
+            they are not in a position, even in bailable offenses, to furnish bail bonds
+            and get released on bail. It is an undeniable fact that the poor, illiterate
+            and weaker sections in our country suffer day in and day out in their struggle
+            for survival and look up to those who have promised them equality- social,
+            political and economic.
+          </p>
+          </div>
+          <div class="offset-1 col-4 offset-sm-1 col-sm-4" id="card3">
+            <h1 style="text-align: center; padding-top: 1%; " class="d-none d-sm-block">Our Vision</h1>
+            <img src="{% static 'home/dist/img/Searching.svg'%}" class="img-fluid" id="card-img-3" alt="sticker3">
+            <h6 style="text-align: center; padding-top: 1%; " class="d-block d-sm-none">Our vision</h6>
+            <p style="text-align: justify;" class="d-none" id="card-content-3">
+              Prisoners are generally marginalized by society and labeled as <strong>offenders</strong>. Their plight
+              is usually overlooked to the extent that they end up losing even the basic rights as human
+              beings. <strong>Saksham</strong>, as the name suggests, will strive to bring hope and justice to prisoners,
+              former prisoners and their families by making them <strong>self-reliant</strong> so that they become valued
+              members of our society. Our vision is to impact positive social change so that justice, which
+              has become a distant dream, turns into reality.
+              The initiative which is yet to kick-start, hopes to evolve and spread its wings in various
+              cities across India.
+            </p>
+          </div>
+          <div class="offset-2 col-4 offset-sm-2 col-sm-4" id="card4">
+            <h1 style="text-align: center; padding-top: 1%;" class="d-none d-sm-block">Our Mission</h1>
+            <img src="{% static 'home/dist/img/Add Application.svg'%}" class="img-fluid" id="card-img-4" alt="sticker5">
+            <h6 style="text-align: center; padding-top: 1%;" class="d-block d-sm-none">Our Mission</h6>
+              <ul class="list-group d-none" id="card-content-4">
+                <li class="list-group-item">To extend support to prisoners, former prisoners
+                  and their families in the field of counseling, health, education, vocational
+                  training, job opportunities, rehabilitation, culture therapy, yoga, meditation,
+                  drug de-addiction, legal-aid, and moral upliftment</li>
+                <li class="list-group-item list-group-item-primary">To work in collaboration with government to address
+                  issues of overcrowding and merciless conditions </li>
+                <li class="list-group-item list-group-item-secondary">Work to improve access to clean water, better sanitation,
+                  emergency medical assistance, food, security, clothing and general infrastructure</li>
+                <li class="list-group-item list-group-item-success">Focus on victim-offender reconciliation and advocate
+                  Restorative Justice</li>
+                <li class="list-group-item list-group-item-danger">Our volunteers will run a detailed rehabilitation and counseling
+                  programme and provide free legal aid to inmates</li>
+                <li class="list-group-item list-group-item-warning">Special reform work at Central Jail to aid women who are
+                  the victims of crime and social abuse.
+                </li>
+                <li class="list-group-item list-group-item-info">We plan to conduct public hearings and seminars
+                  within the prison premises to raise awareness, provide voting cards etc.
+                  The team shall invite legal luminaries and experts to attend seminars,
+                  conferences and panel discussions and report </li>
+                  <li class="list-group-item list-group-item-light">We shall provide prisoners and their offsprings
+                    with textbooks and stationary along with other requirements. Teaching will
+                    happen in the vernacular medium.</li>
+                  <li class="list-group-item list-group-item-dark">Extend free legal assistance to juveniles
+                    and women inmates.</li>
+              </ul>
+          </div>
+        </div>
+
+<!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-describedby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-sm-6 col-12 d-none d-sm-block">
+                      <img src="{% static 'home/images/corona 2.svg'%}" class="img-fluid" alt="corona2" loading="lazy">
+                    </div>
+                    <div class="col-sm-6 col-12">
+                      <img src="{% static 'home/images/corona1.svg'%}" class="img-fluid" alt="corona1" loading="lazy">
+                    </div>
+                    <div class="col-12">
+                      <h1 class="d-none d-sm-block">Stay safe in Home and enjoy the new normal.</h1>
+                      <h3 class="d-block d-sm-none">Stay safe in Home and enjoy the new normal.</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <script src="{% static 'home/Depd/jquery.slim.min.js'%}"> </script>
+    <script src="{% static 'home/Depd/popper.min.js'%}"></script>
+    <script src="{% static 'home/Depd/bootstrap.min.js'%}"></script>
+    <script src="{% static 'home/scripts/index.js'%}"></script>
+</body>
+</html>

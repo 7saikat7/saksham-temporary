@@ -1,0 +1,10 @@
+@font-face
+{
+    font-family: 'sanskritnormal';
+    src: url('../dist/LOGO font/SamarkanNormal-RXGE.woff');
+    font-display: swap;
+}
+#logo-text
+{
+    font-family: 'sanskritnormal',Fallback,'Roboto Mono', monospace;
+}

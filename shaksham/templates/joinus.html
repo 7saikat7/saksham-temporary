@@ -1,0 +1,125 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saksham is a NGO working towards making the families 
+    of the accused and prisoners in jail self independent economically so that they don't become
+     the passive victim of punishment given by law.">
+    <title>Saksham: Legal Aid Society</title>
+   {% csrf_token %}
+    <link rel="shortcut icon" href="{% static 'home/dist/img/favicon.ico'%}">
+    <link rel="stylesheet" href="{% static 'home/node_modules/font-awesome/css/font-awesome.min.css'%}">
+    <link rel="stylesheet" href="{% static 'home/Depd/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'home/stylesheets/join us.css'%}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="/"><img src="{% static 'home/dist/img/kyan.png'%}" id="logo-image">&nbsp;<span id="logo-text">Saksham</span></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'donate' %}">Donate</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'apply' %}">Apply</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">About US</a>
+                    <a class="dropdown-item" href="#">BLog</a>
+                    <a class="dropdown-item" href="#">Gallery</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-warning" type="button" style="color: black;" href="#">Join Us<span class="sr-only">(current)</span></a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <div class="container" id="content">
+      <div class="row">
+        <div class="col-12" id="header-text">
+          Join Us
+        </div>
+      </div>
+      <div class="row" id="form-card">
+        <div class="col-12 col-md-4">
+          <img src="{% static 'home/images/Login.gif'%}" class="img-fluid" id="form-image">
+        </div>
+        <div class="col-12 col-sm-8">
+
+
+          <form class="offset-sm-1" method="POST"   id="login-form">{% csrf_token %}
+
+            <div class="form-group row">
+              {{ ok }}
+              <label for="Email" class="col-md-2 col-form-label">
+                Email
+              </label>
+              <div class="col-md-6">
+                  {% csrf_token %}
+                <input type="text" id="Email" name="Email" class="form-control" placeholder="Email" required="true">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="password" class="col-md-2 col-form-label">
+                Password
+              </label>
+              <div class="col-md-6">
+                  {% csrf_token %}
+                <input type="password" name="password" id="password" required="true" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <div class="offset-md-2 offset-4 col-md-5 col-4">
+                <button type="submit" role="button" class="btn btn-success"> Login</button>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-8 col-12">
+                <ul style="list-style-type: none;">
+                  <li><a href="{% url 'reset_password' %}" role="link">Forgot Password?</a></li>
+                  <li><h6>Don't have an account!</h6></li>
+                  <li><a href="{% url 'signup' %}" role="link">Create an account</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="row row-content">
+              <div class="col-sm-8 col-12" style="text-align: center;">
+                <hr>
+                <h6>Sign-in with</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-3 col-sm-2">
+                <button class="btn btn-success" type="button" role="button"><span class="fa fa-google">&nbsp;Google</span></button>
+              </div>
+              <div class="col-3 offset-sm-1 col-sm-2" style="margin-left: 3%;">
+                <button class="btn btn-success" type="button" role="button"><span class="fa fa-facebook">&nbsp;Facebook</span></button>
+              </div>
+              <div class="col-3 offset-sm-1 col-sm-2" style="margin-left: 6%;">
+                <button class="btn btn-success" type="button" role="button"><span class="fa fa-instagram">&nbsp;Instagram</span></button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="{% static 'home/Depd/jquery.slim.min.js'%}"> </script>
+    <script src="{% static 'home/Depd/popper.min.js'%}"></script>
+    <script src="{% static 'home/Depd/bootstrap.min.js'%}"></script>
+</body>
+</html>

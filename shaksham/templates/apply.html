@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Saksham is a NGO working towards making the families 
+    of the accused and prisoners in jail self independent economically so that they don't become
+     the passive victim of punishment given by law.">
+    <title>Saksham|Legal Aid Society</title>
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" as="style">
+    <link rel="preload stylesheet" href="https://fonts.googleapis.com/css2?family=Signika:wght@700&display=swap" as="style">
+    <link rel="shortcut icon" href="{% static 'home/dist/img/favicon.ico'%}">
+    <link rel="preload stylesheet" href="{% static 'home/stylesheets/font-face.css'%}" as="style">
+    <link rel="stylesheet" href="{% static 'home/Depd/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{% static 'home/stylesheets/apply.css'%}">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-label="collapse button" >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand mr-auto" href="#"><img src="{% static 'home/dist/img/kyan.png'%}" id="logo-image" alt="logo-image" loading="lazy">&nbsp;<span id="logo-text">Saksham</span></a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'donate' %}">Donate</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="{% url 'apply' %}">Apply<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More...
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">BLog</a>
+                    <a class="dropdown-item" href="#">Gallery</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link btn btn-warning" type="button" style="color: black;" href="{% url 'user_login' %}" id="nav-button">Join Us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+    </header>
+    <div class="container" id="content">
+        <div class="row">
+            <div class="col-12" id="page-title">
+                Application Form
+            </div>
+        </div>
+        <div class="card">
+            <img src="{% static 'home/images/hands.png'%}" class="card-img-top img-fluid" alt="form-header">
+            <div class="card-body">
+                <form>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-from-label" for="name"><h5>Applicant Name</h5></label>
+                        <div class="col-sm-10">
+                            <input id="name" type="text" class="form-control" placeholder="Full Name" required="true">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="DOB"><h5>Date of Birth</h5></label>
+                        <div class="col-sm-4">
+                            <input id="DOB" type="date" class="form-control" placeholder="DOB">
+                        </div>
+                        <label class="offset-sm-2 col-sm-2 col-form-label" for="Gender"><h5>Gender</h5></label>
+                        <div class="col-sm-2">
+                            <select id="Gender" class="custom-select">
+                                <option selected>Choose..</option>
+                                <option value="1">Male</option>
+                                <option value="-1">Female</option>
+                                <option value="0">Transgender</option>
+                                <option value="-2">Prefer not to mention</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="phn-number"><h5>Contact Number</h5></label>
+                        <div  class="col-sm-4">
+                            <input id="phn-number" class="form-control" type="tel" aria-describedby="phone number" required="true">
+                            <small id="phone" class="form-text text-muted">
+                                * We won't share this with any third party.
+                            </small>
+                        </div>
+                        <label class="offset-sm-1 col-sm-2 col-form-label" for="email"><h5>Email</h5></label>
+                        <div class="col-sm-3">
+                            <input id="email" class="form-control" type="email">
+                            <small id="phone2" class="form-text text-muted">
+                                * We won't share this with any third party.
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label" for="image"><h5>Upload Your Photo</h5></label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="input-group">
+                            <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="image" aria-describedby="inputGroupFileAddon04">
+                            <label class="custom-file-label" for="image" id="choose">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                            <button class="btn btn-info" type="button" id="image1">Upload</button>
+                            </div>
+                        </div>       
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label" for ="proof"><h5>Upload any Govt. ID</h5><h6>(Ex: Voter Card/ Aadhar Card/ Pan Card)</h6></label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="input-group">
+                            <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="proof" aria-describedby="inputGroupFileAddon04">
+                            <label class="custom-file-label" for="proof" id="proof-upload">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                            <button class="btn btn-danger" type="button" id="proof1">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label" for ="proof2"><h5>Upload the rear side photo of the ID</h5></label>
+                    </div>
+                    <div class="form-group row">
+                        <div class="input-group">
+                            <div class="custom-file">
+                            <input type="file" class="custom-file-input" id="proof2" aria-describedby="inputGroupFileAddon04">
+                            <label class="custom-file-label" for="proof" id="proof-upload-2">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                            <button class="btn btn-warning" type="button">Upload</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <button class="offset-sm-3 col-sm-2 col-12 btn btn-success" type="submit" role="button" style="margin-bottom: 1%;">Submit</button>
+                        <button class="offset-sm-2 col-sm-2 col-12  btn btn-secondary" type="reset" role="button">Reset</button>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'home/Depd/jquery.slim.min.js'%}"> </script>
+    <script src="{% static 'home/Depd/popper.min.js'%}"></script>
+    <script src="{% static 'home/Depd/bootstrap.min.js'%}"></script>
+    <script src="{% static 'home/scripts/apply.js'%}"></script>
+</body>
+</html>
